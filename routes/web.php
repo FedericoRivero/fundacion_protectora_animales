@@ -7,4 +7,8 @@ use App\Http\Controllers\MensajesController;
 
 Route::get('/',[WelcomeController::class,'index'])->name('welcome');
 
-Route::resource('mensajes',MensajesController::class);
+Route::resource('mensajes',MensajesController::class)->middleware('auth');
+
+Route::view('/login', 'auth.login')->name('login');
+Route::view('/register', 'auth.register')->name('register');
+Route::view('/home','home')->name('HOME')->middleware('auth');

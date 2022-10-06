@@ -12,6 +12,14 @@
     <header>
         <h1>Fundacion protectora de animales</h1>
     </header>
+    <nav>
+        @auth
+            <a href="{{route('HOME')}}">Home</a>
+        @else
+            <a href="{{route('login')}}">Login</a>
+            <a href="{{route('register')}}">Registrar</a>
+        @endauth
+    </nav>
     <section>   
         <img src="{{asset('portada.jpg')}}" alt="">
     </section>
