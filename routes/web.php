@@ -5,6 +5,6 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\MensajesController;
 
 
-Route::get('/',[WelcomeController::class,'index'])->name('welcome');
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
-Route::resource('mensajes',MensajesController::class);
+Route::resource('mensajes', MensajesController::class);

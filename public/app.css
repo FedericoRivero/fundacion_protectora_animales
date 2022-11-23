@@ -1,30 +1,15 @@
-section{
+section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.form-mensajes{
+.form-mensajes {
     margin-top: 50px;
     width: 600px;
 }
 
-h1{
-    text-align: center;
-
-}
-
-footer{
-    margin-top: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: darkslategrey;
-    color: white;
-    padding-top: 10px;
-}
-
-footer p{
+h1 {
     text-align: center;
 }

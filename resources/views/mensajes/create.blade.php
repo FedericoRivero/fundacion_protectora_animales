@@ -2,13 +2,15 @@
     @csrf
 
     <div>
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control"name="nombre" id="nombre">
+        <div class="mt-4">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Escribe tu nombre...">
+            <label class="mt-4" for="mensaje">Mensaje</label>
+            <textarea name="texto" class="form-control" id="mensaje" cols="30" rows="10"
+                placeholder="Escriba su consulta...">
+            </textarea>
+        </div>
+
+        <input type="submit" class="btn btn-primary mt-2" value="Enviar">
     </div>
-    <div>
-        <textarea name="texto"  class="form-control" id="mensaje" cols="30" rows="10">
-            Escriba su consulta 
-        </textarea>
-    </div>
-    <input type="submit" class="btn btn-primary" value="Enviar">
 </form>
