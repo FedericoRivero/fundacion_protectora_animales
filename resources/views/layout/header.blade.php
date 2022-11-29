@@ -22,15 +22,27 @@
             </button>
             <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
                 <ul class="navbar-nav">
+                    @auth
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('welcome') }}">Home</a>
+                        <a class="nav-link" href="{{route('HOME')}}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('mensajes.index') }}">Mensajes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <form action="{{route('logout')}}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-outline-danger">Salir</button>
+                        </form>
                     </li>
+                    @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">Registro</a>
+                    </li>
+                    @endauth
                 </ul>
             </div>
         </div>

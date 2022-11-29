@@ -17,7 +17,8 @@ class MensajeFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nombre' => fake()->name(),
+            'texto' => fake()->realText(rand(50, 100))
         ];
     }
 }
