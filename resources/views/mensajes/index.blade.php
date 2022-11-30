@@ -1,8 +1,9 @@
 <!-- Header -->
 @include('layout.header')
 
-<section class="mt-4">
-    <table class="table">
+<div class="table-responsive">
+    <table class="table table-striped">
+
         <thead>
             <tr>
                 <th>#</th>
@@ -30,8 +31,9 @@
             @endforeach
 
         </tbody>
+
     </table>
-</section>
+</div>
 
 <!-- Footer -->
 @include('layout.footer')
