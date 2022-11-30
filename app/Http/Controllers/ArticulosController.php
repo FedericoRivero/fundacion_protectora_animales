@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ArticulosExport;
+use App\Imports\ArticulosImport;
 use App\Models\Articulo;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class ArticulosController extends Controller
 {
@@ -14,7 +18,8 @@ class ArticulosController extends Controller
      */
     public function index()
     {
-        //
+        $articulos = Articulo::all();
+        return view('articulos.index', compact('articulos'));
     }
 
     /**
@@ -35,7 +40,9 @@ class ArticulosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $articulo = new Articulo;
+        $articulo->create($request->all());
+        return redirect(route('articulos.index'));
     }
 
     /**
@@ -81,5 +88,16 @@ class ArticulosController extends Controller
     public function destroy(Articulo $articulo)
     {
         //
+    }
+
+    public function ImportarExcel(Request $request)
+    {
+        Excel::import(new ArticulosImport, $request->file('articulos'));
+        return redirect(route('articulos.index'));
+    }
+
+    public function ExportExcel()
+    {
+        return Excel::download(new ArticulosExport, 'listadoArticulos.xlsx');
     }
 }

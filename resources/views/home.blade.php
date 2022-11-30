@@ -1,7 +1,9 @@
 <!-- Header -->
 @include('layout.header')
 
-<h1>Bienvenido</h1>
+<div class="container-fluid">
+    <h1 class="text-center">Bienvenido</h1>
+</div>
 
 <!-- Footer -->
 @include('layout.footer')

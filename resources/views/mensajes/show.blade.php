@@ -1,11 +1,12 @@
 <!-- Header -->
 @include('layout.header')
 
-<section class="mt-4">
-    <h1>{{$mensaje->nombre}}</h1>
-    <p>{{$mensaje->texto}}</p>
-    <a class="btn btn-success" href="{{route('mensajes.index')}}">Volver</a>
-</section>
+<div class="container-fluid text-center">
+    <h1>Mensaje</h1>
+    <h1>Nombre: {{$mensaje->nombre}}</h1>
+    <p>Mensaje: {{$mensaje->texto}}</p>
+    <a class="btn btn-primary" href="{{route('mensajes.index')}}">Volver</a>
+</div>
 
 <!-- Footer -->
 @include('layout.footer')
