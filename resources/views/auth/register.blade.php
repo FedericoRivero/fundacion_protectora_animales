@@ -1,9 +1,9 @@
 <!-- Header -->
 @include('layout.header')
 
-<main class="form-signin w-100 m-auto">
+<main class="form-signin w-100 m-auto mb-5">
 
-    <h1 class="h3 mb-3 fw-normal">Registro</h1>
+    <h1 class="h3 mb-3 fw-normal mt-5">Registro</h1>
     <form action="{{route('register')}}" method="post">
         @csrf
 
@@ -22,7 +22,7 @@
             <label for="password">Vuelve a ingresar tu contraseña</label>
         </div>
 
-        <input class="w-100 btn btn-lg btn-primary" type="submit" value="Registrar">
+        <input class="w-100 btn btn-lg btn-primary mb-5" type="submit" value="Registrar">
     </form>
 </main>
 

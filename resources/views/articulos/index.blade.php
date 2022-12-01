@@ -2,7 +2,7 @@
 @include('layout.header')
 
 <div class="container-fluid">
-    <h1>Articulos</h1>
+    <h1>Artículos</h1>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -32,7 +32,8 @@
                 @include('articulos.create')
 
                 @include('articulos.import')
-                <h3 class="mt-5">Descargar los articulos</h3>
+
+                <h3 class="mt-5">Descargar los artículos</h3>
                 <a href="articulos/exportar" class="btn btn-primary">Exportar</a>
             </div>
         </div>

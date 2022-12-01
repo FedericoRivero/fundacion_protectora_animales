@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{-- favicon --}}
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon.png') }}">
     <title>Fundación animales</title>
     <link rel="stylesheet" href="{{asset('app.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -27,7 +29,7 @@
                         <a class="nav-link" href="{{route('HOME')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('articulos.index') }}">Articulos</a>
+                        <a class="nav-link" href="{{ route('articulos.index') }}">Artículos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('mensajes.index') }}">Mensajes</a>

@@ -1,5 +1,5 @@
 <div class="container-fluid text-center mt-3">
-    <h3>Crear articulos</h3>
+    <h3>Crear artículos</h3>
     <form action="{{route('articulos.store')}}" method="POST">
         @csrf
         <div class="form-floating mt-2">
