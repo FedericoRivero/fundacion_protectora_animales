@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnimalesController;
 use App\Http\Controllers\ArticulosController;
 use App\Http\Controllers\DifusionController;
 use Illuminate\Support\Facades\Route;
@@ -8,6 +9,10 @@ use App\Http\Controllers\MensajesController;
 
 
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
+
+// Ruta DOMPDF
+Route::get('generarFicha', [AnimalesController::class, 'GetGenerarFicha'])->middleware('auth');
+Route::post('generarFicha', [AnimalesController::class, 'PostGenerarFicha'])->middleware('auth');
 
 // Ruta Protegida Mensajes
 Route::resource('mensajes', MensajesController::class)->middleware('auth');

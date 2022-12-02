@@ -28,7 +28,7 @@ class FundacionMail extends Mailable
 
     public function build()
     {
-        return $this->view('mails.fundacion');
+        return $this->view('mails.fundacio');
     }
 
     /**
@@ -39,7 +39,7 @@ class FundacionMail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Fundacion Mail',
+            // subject: 'Fundacion Mail',
         );
     }
 
@@ -51,7 +51,7 @@ class FundacionMail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'view.name',
+            view: 'mails.fundacion',
         );
     }
 
